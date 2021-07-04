@@ -1,7 +1,7 @@
 # Harcama Takip Uygulaması 📱
 **Android Bootcamp 2021 Bitirme Projesi**
 
-![Harcama Takip (1)](https://user-images.githubusercontent.com/49096704/117194263-8f1f1c80-adec-11eb-995f-136d8e42e749.gif)
+![Harcama Takip Uygulaması](https://user-images.githubusercontent.com/49096704/124379895-5ef7db00-dcc2-11eb-9aab-f832164b0438.gif)
 
 Birçok önemli Android konularını öğrendiğimiz 34 saatlik Android Bootcamp 2021'in sonuna gelmiş bulunmaktayız. [Eğitim oynatma listesine buradan ulaşabilirsiniz](https://www.youtube.com/playlist?list=PLZj2Q42tw-6915lSwwLBI8zXJHemcFYnj). Fakat yenileri ve daha fazlası için bizi takip etmeyi unutmayın !
 [Youtube Kanalımız](https://www.youtube.com/channel/UCwHGWX8X0TqGXMb-Q_GkmPg).<br/><br/>
@@ -10,11 +10,17 @@ Web Sitesi ➡️ https://events.withgoogle.com/android-bootcamp/ <br/><br/>
 Bu projede, sizden bitirme projesinde istediğimiz her şeyin örneklerini ve açıklamalarını görebilirsiniz😀
 <br/>
 Başlıca bitirme projesinde kullanılanlar:<br/>
-- Retrofit
+- Dependency Injection Dagger Hilt
+- DataStore
+- Retrofit Coroutines
+- ViewModel
+- Live Data
+- Flow
 - Jetpack Navigation
 - Room Database
-- View Binding
-- Recycler View
+- View Binding 
+- Data Binding
+- Recycler View Animation
 - Splash Screen
 - Onboarding Screen
 
@@ -31,5 +37,9 @@ Projede Kullanılan API ➡️ https://free.currencyconverterapi.com/ <br/><br/>
 🏁Ayrıca **mobil uygulamanızdan kolayca para kazanmak** isterseniz bu videoya bakabilirsiniz
 [Mobil Uygulamaya Reklam Koyma](https://www.youtube.com/watch?v=nAs_fryOm-E).<br/><br/>
 💻Discord sunucumuzda sorularınızı bekliyoruz. İyi çalışmalar😀<br/><br/>
+
+#### Uygulama Mimarisi
+<img src="https://developer.android.com/topic/libraries/architecture/images/final-architecture.png" height="500">
+
 
 
