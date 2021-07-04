@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#667eea</color>
-    <color name="purple_500">#f7b733</color>
+    <color name="orange">#f7b733</color>
     <color name="purple_700">#764ba2</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -11,5 +11,6 @@
     <color name="fatura_color">#673AB7</color>
     <color name="kira_color">#FFC107</color>
     <color name="diger_color">#03A9F4</color>
-    <color name="button_text_color">#878787</color>
+    <color name="chip_text_color">#878787</color>
+    <color name="chip_stroke_color">#ACACAC</color>
 </resources>

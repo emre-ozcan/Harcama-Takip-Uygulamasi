@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.EkleFragment">
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragments.add.EkleFragment">
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -12,7 +12,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextAciklama"
@@ -33,59 +33,24 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
         android:text="Harcama Ekle"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAddExit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayoutHarcama"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHarcama">
-
-        <RadioButton
-            android:id="@+id/radioFatura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fatura" />
-
-        <RadioButton
-            android:id="@+id/radioKira"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kira" />
-
-        <RadioButton
-            android:id="@+id/radioDiger"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Diğer" />
-    </RadioGroup>
+        app:layout_constraintTop_toTopOf="@+id/buttonAddExit" />
 
     <Button
         android:id="@+id/buttonEkle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
         android:text="EKLE"
         app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayoutHarcama"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupCurrency" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutHarcama"
@@ -110,45 +75,96 @@
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <RadioGroup
-        android:id="@+id/radioGroup3"
+    <ImageView
+        android:id="@+id/buttonAddExit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-
-        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHarcama"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true">
 
-        <RadioButton
-            android:id="@+id/radioButtonTL"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            style="@style/CustomChipChoiceStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TL" />
+            android:checked="true"
+            android:text="Fatura"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/ic_fatura" />
 
-        <RadioButton
-            android:id="@+id/radioButtonDolar"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            style="@style/CustomChipChoiceStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dolar" />
+            android:text="Diğer"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/ic_diger" />
 
-        <RadioButton
-            android:id="@+id/radioButtonEuro"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip6"
+            style="@style/CustomChipChoiceStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Euro" />
+            android:text="Kira"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/ic_kira" />
+    </com.google.android.material.chip.ChipGroup>
 
-        <RadioButton
-            android:id="@+id/radioButtonSterlin"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupType"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip10"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sterlin" />
+            android:checked="true"
+            android:text="₺" />
 
-    </RadioGroup>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip7"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip9"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip8"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="£" />
+    </com.google.android.material.chip.ChipGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

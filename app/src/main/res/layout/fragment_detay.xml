@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.DetayFragment">
+    tools:context=".ui.fragments.detail.DetayFragment">
 
 
     <ImageView
         android:id="@+id/imageViewDetay"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="150dp"
         android:src="@drawable/ic_fatura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -25,9 +27,8 @@
         android:layout_marginTop="40dp"
         android:text="TextView"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDetay"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDetay"
         app:layout_constraintTop_toBottomOf="@+id/imageViewDetay" />
 
     <TextView
@@ -35,35 +36,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="64dp"
         android:text="TextView"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDetayAciklama"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetayAciklama"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetayAciklama" />
 
-    <Button
-        android:id="@+id/buttonSil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#FF5722"
-        android:text="SİL"
-        app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetayHarcama" />
-
-    <ImageButton
-        android:id="@+id/buttonGeri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#FFFFFF"
-        android:src="@drawable/ic_back"
+    <ImageView
+        android:id="@+id/buttonExit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_exit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/buttonDelete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonExit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonExit" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harcamanız"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonExit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonExit" />
 </androidx.constraintlayout.widget.ConstraintLayout>

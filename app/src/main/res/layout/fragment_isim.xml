@@ -3,75 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.IsimFragment">
+    android:layout_height="300dp"
+    tools:context=".ui.fragments.user.IsimFragment">
 
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
         android:text="İsim Değiştir"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonNameExit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
-
-        <RadioButton
-            android:id="@+id/radioErkek"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Erkek" />
-
-        <RadioButton
-            android:id="@+id/radioKadın"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kadın" />
-
-        <RadioButton
-            android:id="@+id/radioButtonNone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Belirtmek İstemiyorum" />
-    </RadioGroup>
+        app:layout_constraintTop_toTopOf="@+id/buttonNameExit" />
 
     <Button
         android:id="@+id/buttonKaydet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:text="Kaydet"
         app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupGender" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -79,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextIsim"
@@ -87,4 +51,49 @@
             android:layout_height="wrap_content"
             android:hint="İsminizi Giriniz" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/buttonNameExit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip11"
+            android:layout_width="wrap_content"
+            style="@style/CustomChipFilterStyle"
+            android:layout_height="wrap_content"
+            android:text="Erkek" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip12"
+            style="@style/CustomChipFilterStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kadın" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip13"
+            android:layout_width="wrap_content"
+            style="@style/CustomChipFilterStyle"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Belirtmek İstemiyorum" />
+    </com.google.android.material.chip.ChipGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

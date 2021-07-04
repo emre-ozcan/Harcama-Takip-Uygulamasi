@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.FirstFragment">
+    tools:context=".ui.fragments.onboarding.FirstFragment">
 
     <TextView
         android:id="@+id/textView8"
@@ -56,6 +56,6 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:strokeColor="@color/purple_500" />
+        app:strokeColor="@color/orange" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
